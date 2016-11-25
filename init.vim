@@ -18,7 +18,12 @@ call neobundle#begin(expand('$HOME/.config/nvim/bundle'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'vim-airline/vim-airline'
-NeoBundle 'valloric/youcompleteme'
+NeoBundle 'justinmk/vim-sneak'
+NeoBundle 'vim-ruby/vim-ruby'
+NeoBundle 'tpope/vim-rails'
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'ctrlpvim/ctrlp.vim'
+NeoBundle 'airblade/vim-gitgutter'
 
 call neobundle#end()  
 filetype plugin indent on
@@ -38,5 +43,17 @@ let g:airline#extensions#tabline#enabled = 1
 nnoremap <S-tab> :bp<CR>
 nnoremap <tab>   :bn<CR>
 
+" CTRLP
+set wildignore+=*/tmp/*,*/bin/*,*.so,*.swp,*.zip     " MacOSX/Linux
+let g:ctrlp_custom_ignore = {
+      \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+      \ 'file': '\v\.(exe|so|dll)$',
+      \ 'link': 'some_bad_symbolic_links',
+      \ }
+let g:ctrlp_show_hidden = 1
+
 " Dont lock tab with buffer 
 set hidden
+
+" SNEAK
+let g:sneak#streak = 1
