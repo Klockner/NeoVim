@@ -43,6 +43,7 @@ NeoBundleCheck
 let mapleader=","
 set encoding=utf-8
 set tabstop=2 shiftwidth=2
+
 " Show trailing spaces
 highlight Trail ctermbg=red guibg=red
 call matchadd('Trail', '\s\+$', 100)
@@ -97,17 +98,17 @@ set smartcase
 " search characters as they're entered
 set incsearch
 
-" use leader to interact with the system clipboard
-nnoremap <Leader>p "*]p
-nnoremap <Leader>P "*]P
+" " Copy to clipboard
+vnoremap  <leader>y  "+y
+nnoremap  <leader>Y  "+yg_
+nnoremap  <leader>y  "+y
+nnoremap  <leader>yy  "+yy
 
-nnoremap <Leader>y :y*<cr>
-nnoremap <Leader>c ^"*c$
-nnoremap <Leader>d ^"*d$
-
-vnoremap <Leader>y "*y
-vnoremap <Leader>c "*c
-vnoremap <Leader>d "*d
+" " Paste from clipboard
+nnoremap <leader>p "+p
+nnoremap <leader>P "+P
+vnoremap <leader>p "+p
+vnoremap <leader>P "+P
 
 " Make X an operator that removes text without placing text in the default registry
 nmap X "_d
