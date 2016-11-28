@@ -133,3 +133,15 @@ set numberwidth=2
 
 " Auto complete html tags
 inoremap ><Tab> ><Esc>F<lyt>o</<C-r>"><Esc>O<Space>
+
+" Undo any words
+inoremap <Space> <Space><C-g>u
+inoremap <Enter> <Enter><C-g>u
+
+" Auto complete with CTRL SPACE
+inoremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?
+\ "\<lt>C-n>" :
+\ "\<lt>C-x>\<lt>C-o><c-r>=pumvisible() ?" .
+\ "\"\\<lt>c-n>\\<lt>c-p>\\<lt>c-n>\" :" .
+\ "\" \\<lt>bs>\\<lt>C-n>\"\<CR>"
+imap <C-@> <C-Space>
