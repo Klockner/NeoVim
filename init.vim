@@ -29,6 +29,7 @@ NeoBundle 'terryma/vim-smooth-scroll'
 NeoBundle 'tpope/vim-commentary'
 NeoBundle 'tpope/vim-endwise'
 NeoBundle 'rstacruz/vim-closer'
+NeoBundle 'mileszs/ack.vim'
 
 call neobundle#end()
 filetype plugin indent on
@@ -129,3 +130,6 @@ set number
 
 " Keep the line number gutter narrow so three digits is cozy.
 set numberwidth=2
+
+" Auto complete html tags
+inoremap ><Tab> ><Esc>F<lyt>o</<C-r>"><Esc>O<Space>
