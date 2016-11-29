@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/home/klockner/Projects/account'
+let g:netrw_dirhist_2='/home/klockner/Projects/account/app'
+let g:netrw_dirhist_3='/home/klockner/Projects/account/app/controllers'
+let g:netrw_dirhist_4='/home/klockner/GitHub/colchonet'
+let g:netrw_dirhist_5='/home/klockner/GitHub/colchonet/app'
+let g:netrw_dirhist_6='/home/klockner/GitHub/colchonet/app/controllers'

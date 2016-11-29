@@ -1,0 +1,15 @@
+ack.vim
+ctrlp.vim
+neobundle.vim
+nerdtree
+vim-airline
+vim-closer
+vim-commentary
+vim-endwise
+vim-gitgutter
+vim-move
+vim-rails
+vim-ruby
+vim-smooth-scroll
+vim-sneak
+vim-surround
