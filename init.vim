@@ -28,8 +28,8 @@ NeoBundle 'matze/vim-move'
 NeoBundle 'terryma/vim-smooth-scroll'
 NeoBundle 'tpope/vim-commentary'
 NeoBundle 'tpope/vim-endwise'
-NeoBundle 'rstacruz/vim-closer'
 NeoBundle 'mileszs/ack.vim'
+NeoBundle 'jiangmiao/auto-pairs'
 
 call neobundle#end()
 filetype plugin indent on
