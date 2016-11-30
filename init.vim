@@ -33,6 +33,7 @@ NeoBundle 'mileszs/ack.vim'
 
 call neobundle#end()
 filetype plugin indent on
+set sw=2 sts=2 et
 
 " If there are uninstalled bundles found on startup,
 " this will conveniently prompt you to install them.
@@ -43,6 +44,7 @@ NeoBundleCheck
 let mapleader=","
 set encoding=utf-8
 set tabstop=2 shiftwidth=2
+set ruler
 
 " Show trailing spaces
 highlight Trail ctermbg=red guibg=red
