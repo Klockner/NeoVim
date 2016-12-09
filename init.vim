@@ -31,6 +31,7 @@ NeoBundle 'tpope/vim-endwise'
 NeoBundle 'mileszs/ack.vim'
 NeoBundle 'jiangmiao/auto-pairs'
 NeoBundle 'vim-syntastic/syntastic'
+NeoBundle 'scrooloose/nerdcommenter'
 
 call neobundle#end()
 filetype plugin indent on
@@ -151,9 +152,6 @@ inoremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?
 imap <C-@> <C-Space>
 
 " Syntastic (RUBOCOOOOOP)
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
 
 let g:syntastic_ruby_checkers = ['rubocop']
 let g:syntastic_always_populate_loc_list = 1
@@ -172,3 +170,25 @@ highlight link SyntasticErrorSign SignColumn
 highlight link SyntasticWarningSign SignColumn
 highlight link SyntasticStyleErrorSign SignColumn
 highlight link SyntasticStyleWarningSign SignColumn
+
+" NERD COMMENTER
+" comment
+map <silent> <C-c> ,c
+
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+
+" Use compact syntax for prettified multi-line comments
+let g:NERDCompactSexyComs = 1
+
+" Align line-wise comment delimiters flush left instead of following code indentation
+let g:NERDDefaultAlign = 'left'
+
+" Add your own custom formats or override the defaults
+let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/'  }  }
+
+" Allow commenting and inverting empty lines (useful when commenting a region)
+let g:NERDCommentEmptyLines = 1
+
+" Enable trimming of trailing whitespace when uncommenting
+let g:NERDTrimTrailingWhitespace = 1
